@@ -16,8 +16,12 @@ public:
         const int totalCount = getTotalCount(a + b);
         const int sameCount = getSameCount(a, b);
 
-        return (sameCount * 40) / totalCount;
+        return (sameCount * MAX_ALPA_POINT_PORTION) / totalCount;
     }
+
+private:
+    const int MAX_ALPA_POINT_PORTION = 40;
+    const int MAX_LENGTH_POINT_PORTION = 60;
 
 private:
     inline int ch2index(char c)
@@ -28,7 +32,7 @@ private:
     int calcLengthPoint(size_t gap, size_t B)
     {
         float ratio = static_cast<float>(gap) / static_cast<float>(B);
-        return static_cast<int>((1.0f - ratio) * 60.0f);
+        return static_cast<int>((1.0f - ratio) * MAX_LENGTH_POINT_PORTION);
     }
 
     size_t abs(size_t a, size_t b)

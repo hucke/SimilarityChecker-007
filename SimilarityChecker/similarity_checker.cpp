@@ -20,7 +20,7 @@ public:
     }
 
 private:
-    inline int ch2int(char c)
+    inline int ch2index(char c)
     {
         return c - 'A';
     }
@@ -60,7 +60,7 @@ private:
         bool alpha[26] = { false, };
         for (auto ch : str)
         {
-            alpha[ch - 'A'] = true;
+            alpha[ch2index(ch)] = true;
         }
 
         int result = 0;
@@ -77,13 +77,13 @@ private:
         bool alpha_a[26] = { false, };
         for (auto ch : a)
         {
-            alpha_a[ch - 'A'] = true;
+            alpha_a[ch2index(ch)] = true;
         }
 
         bool alpha_b[26] = { false, };
         for (auto ch : b)
         {
-            alpha_b[ch - 'A'] = true;
+            alpha_b[ch2index(ch)] = true;
         }
 
         int result = 0;

@@ -2,7 +2,8 @@
 
 #include "../SimilarityChecker/similarity_checker.cpp"
 
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
+TEST(SimilarityChecker, TestLength01) {
+    SimilarityChecker checker;
+    int point = checker.lengthPoint("ASD", "DSA");
+    EXPECT_EQ(60, point);
 }

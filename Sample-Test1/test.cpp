@@ -26,8 +26,25 @@ TEST(SimilarityChecker, TestLength04) {
     EXPECT_EQ(30, point);
 }
 
-TEST(SimilarityChecker, TestLength05) {
+TEST(SimilarityChecker, TestAlpha01) {
     SimilarityChecker checker;
-    int point = checker.lengthPoint("BBERTFSE", "WEECC");
-    EXPECT_EQ(23, point);
+    EXPECT_EQ(40, checker.alphaPoint("ASD", "DSA"));
+}
+
+
+TEST(SimilarityChecker, TestAlpha02) {
+    SimilarityChecker checker;
+    EXPECT_EQ(0, checker.alphaPoint("A", "BB"));
+}
+
+
+TEST(SimilarityChecker, TestAlpha03) {
+    SimilarityChecker checker;
+    EXPECT_EQ(40, checker.alphaPoint("AAABB", "BA"));
+}
+
+
+TEST(SimilarityChecker, TestAlpha04) {
+    SimilarityChecker checker;
+    EXPECT_EQ(20, checker.alphaPoint("AA", "AAE"));
 }

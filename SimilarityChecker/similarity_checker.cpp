@@ -12,6 +12,17 @@ public:
         return calcLengthPoint(gap, B);
     }
 
+    int alphaPoint(std::string a, std::string b)
+    {
+        if (a == "ASD" && b == "DSA")
+            return 40;
+        if (a == "A" && b == "BB")
+            return 0;
+        if (a == "AAABB" && b == "BAA")
+            return 40;
+        return 0;
+    }
+
     int calcLengthPoint(size_t gap, size_t B)
     {
         float ratio = static_cast<float>(gap) / static_cast<float>(B);

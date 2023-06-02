@@ -40,11 +40,11 @@ TEST(SimilarityChecker, TestAlpha02) {
 
 TEST(SimilarityChecker, TestAlpha03) {
     SimilarityChecker checker;
-    EXPECT_EQ(40, checker.alphaPoint("AAABB", "BAA"));
+    EXPECT_EQ(40, checker.alphaPoint("AAABB", "BA"));
 }
 
 
 TEST(SimilarityChecker, TestAlpha04) {
     SimilarityChecker checker;
-    EXPECT_EQ(40, checker.alphaPoint("AA", "AAA"));
+    EXPECT_EQ(20, checker.alphaPoint("AA", "AAE"));
 }

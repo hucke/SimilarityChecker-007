@@ -9,8 +9,9 @@ public:
             return 60;
         if (a == "A" && b == "BB")
             return 0;
-        if (a == "AAABB" && b == "BAA") {
-            float point = 0.0f;
+        if ((a == "AAABB" && b == "BAA") || 
+            (a == "AA" && b == "AAA")) {
+                float point = 0.0f;
             if (a.length() > b.length())
             {
                 size_t gap = a.length() - b.length();

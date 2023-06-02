@@ -19,3 +19,13 @@ TEST(SimilarityChecker, TestLength03) {
     int point = checker.lengthPoint("AAABB", "BAA");
     EXPECT_EQ(60, point);
 }
+
+TEST(SimilarityChecker, TestLength04) {
+    SimilarityChecker checker;
+    int point = checker.lengthPoint("AA", "AAA");
+    EXPECT_EQ(60, point);
+}
+
+
+
+

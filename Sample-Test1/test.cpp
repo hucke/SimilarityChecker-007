@@ -44,7 +44,7 @@ TEST(SimilarityChecker, TestAlpha03) {
 }
 
 
-TEST(SimilarityChecker, IGNORE_TestAlpha04) {
+TEST(SimilarityChecker, TestAlpha04) {
     SimilarityChecker checker;
     EXPECT_EQ(40, checker.alphaPoint("AA", "AAA"));
 }

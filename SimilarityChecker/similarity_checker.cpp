@@ -7,17 +7,14 @@ public:
     {
         float point = 0.0f;
         size_t gap = abs(a.length(), b.length());
+        size_t B = min(a.length(), b.length());
 
-        if (a.length() > b.length())
-        {
-            point = (1.0f - gap / b.length()) * 60.0f;
-        }
-        else
-        {
-            point = (1.0f - gap / a.length()) * 60.0f;
-        }
+        return calcLengthPoint(gap, B);
+    }
 
-        return static_cast<int>(point);
+    int calcLengthPoint(size_t gap, size_t B)
+    {
+        return static_cast<int>((1.0f - gap / B) * 60.0f);
     }
 
     size_t abs(size_t a, size_t b)
@@ -29,6 +26,18 @@ public:
         else
         {
             return b - a;
+        }
+    }
+
+    size_t min(size_t a, size_t b)
+    {
+        if (a > b)
+        {
+            return b;
+        }
+        else
+        {
+            return a;
         }
     }
 };
